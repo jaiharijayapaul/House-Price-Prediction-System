@@ -1,36 +1,30 @@
-🏠 House Price Prediction
-A machine learning web application that predicts house sale prices using Linear Regression trained on the Ames Housing Dataset. Built with Python and Streamlit, the app provides an end-to-end interactive experience — from raw data exploration to real-time price prediction.
-
-📌 Project Overview
+# 🏠 House Price Prediction
+A machine learning web application that predicts house sale prices using **Linear Regression** trained on the **Ames Housing Dataset**. Built with Python and Streamlit, the app provides an end-to-end interactive experience — from raw data exploration to real-time price prediction.
+---
+## 📌 Project Overview
 This project implements a complete supervised machine learning pipeline to predict residential house prices based on two key features:
-
-GrLivArea — Above-grade living area (square feet)
-TotRmsAbvGrd — Total rooms above grade (excludes bathrooms)
+- **GrLivArea** — Above-grade living area (square feet)
+- **TotRmsAbvGrd** — Total rooms above grade (excludes bathrooms)
 The model is trained, evaluated, and served interactively through a multi-page Streamlit dashboard.
+---
+## 🗂️ Project Structure
+House Price Prediction/ │ ├── Data/ │ ├── train.csv # Ames Housing training dataset │ └── data_description.txt # Feature descriptions │ ├── House_Price_Prediction.ipynb # Jupyter notebook (full ML pipeline) ├── app.py # Streamlit web application └── README.md # Project documentation
 
-🗂️ Project Structure
-House Price Prediction/
-│
-├── Data/
-│   ├── train.csv               # Ames Housing training dataset
-│   └── data_description.txt    # Feature descriptions
-│
-├── House_Price_Prediction.ipynb  # Jupyter notebook (full ML pipeline)
-├── app.py                        # Streamlit web application
-└── README.md                     # Project documentation
-🔧 Tech Stack
-Tool	Purpose
-Python 3	Core language
-Pandas & NumPy	Data loading and manipulation
-Scikit-learn	Linear Regression, StandardScaler, metrics
-Matplotlib	Visualization and charts
-Streamlit	Interactive web application
-Jupyter Notebook	Step-by-step ML pipeline documentation
-🚀 Getting Started
-1. Prerequisites
+---
+## 🔧 Tech Stack
+| Tool | Purpose |
+|---|---|
+| Python 3 | Core language |
+| Pandas & NumPy | Data loading and manipulation |
+| Scikit-learn | Linear Regression, StandardScaler, metrics |
+| Matplotlib | Visualization and charts |
+| Streamlit | Interactive web application |
+| Jupyter Notebook | Step-by-step ML pipeline documentation |
+---
+## 🚀 Getting Started
+### 1. Prerequisites
 Make sure Python 3.8+ is installed. Then install the required packages:
-
-bash
+```bash
 pip install streamlit pandas numpy matplotlib scikit-learn
 2. Dataset
 Place the Ames Housing dataset (train.csv) inside a Data/ folder:
@@ -51,7 +45,7 @@ jupyter notebook House_Price_Prediction.ipynb
 📊 ML Pipeline (7 Steps)
 Step	Description
 1️⃣ Load & Explore	Read CSV, inspect columns, check missing values, plot distributions
-2️⃣ Preprocessing	Remove 2 anomalous outliers (GrLivArea > 4000 and SalePrice < $300K), 80/20 train-test split, apply StandardScaler (fit on train only)
+2️⃣ Preprocessing	Remove anomalous outliers, 80/20 train-test split, apply StandardScaler (fit on train only)
 3️⃣ Model Training	Fit LinearRegression on scaled training features
 4️⃣ Evaluation	Compute MAE, MSE, RMSE, R² on both train and test sets
 5️⃣ Visualization	Area vs Price scatter, Actual vs Predicted chart, Residual analysis
@@ -96,3 +90,4 @@ K-Fold Cross Validation	More reliable accuracy estimate
 XGBoost / Gradient Boosting	Typically achieves R² > 0.90 on this dataset
 📄 License
 This project is for educational purposes. The Ames Housing Dataset is publicly available via Kaggle under their competition terms.
+
